@@ -1,7 +1,7 @@
 package org.appledash.dbs.derpibooru;
 
 import org.appledash.dbs.derpibooru.impl.PhilomenaAPIImpl;
-import org.appledash.dbs.derpibooru.structs.ImageResult;
+import org.appledash.dbs.derpibooru.structs.ImageResponse;
 import org.appledash.dbs.derpibooru.structs.PhilomenaId;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,7 +19,7 @@ public interface PhilomenaAPI {
      * @return List of image results
      * @throws PhilomenaAPIException If something bad happens
      */
-    @NotNull List<ImageResult> search(String query) throws PhilomenaAPIException;
+    @NotNull List<ImageResponse> search(String query) throws PhilomenaAPIException;
 
     /**
      * Perform a batch query against this Philomena API.
@@ -30,7 +30,7 @@ public interface PhilomenaAPI {
      * @return List of image results
      * @throws PhilomenaAPIException If something bad happens
      */
-    @NotNull List<ImageResult> batchQuery(@NotNull Collection<PhilomenaId> imageIds) throws PhilomenaAPIException;
+    @NotNull List<ImageResponse> batchQuery(@NotNull Collection<PhilomenaId> imageIds) throws PhilomenaAPIException;
 
     /**
      * Request a single image response for an image with the given ID.
@@ -39,7 +39,7 @@ public interface PhilomenaAPI {
      * @return ImageResult, or empty optional if not found.
      * @throws PhilomenaAPIException If something bad happens
      */
-    @NotNull Optional<ImageResult> getImage(@NotNull PhilomenaId id) throws PhilomenaAPIException;
+    @NotNull Optional<ImageResponse> getImage(@NotNull PhilomenaId id) throws PhilomenaAPIException;
 
     static PhilomenaAPI create(URI apiUri) {
         return new PhilomenaAPIImpl(apiUri, null, HttpClient.newHttpClient());

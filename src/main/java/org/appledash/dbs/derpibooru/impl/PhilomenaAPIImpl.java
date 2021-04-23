@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.appledash.dbs.derpibooru.PhilomenaAPI;
 import org.appledash.dbs.derpibooru.PhilomenaAPIException;
-import org.appledash.dbs.derpibooru.structs.ImageResult;
+import org.appledash.dbs.derpibooru.structs.ImageResponse;
 import org.appledash.dbs.derpibooru.structs.PhilomenaId;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -44,12 +44,12 @@ public class PhilomenaAPIImpl implements PhilomenaAPI {
     }
 
     @Override
-    public @NotNull List<ImageResult> search(String query) throws PhilomenaAPIException {
+    public @NotNull List<ImageResponse> search(String query) throws PhilomenaAPIException {
         return this.makeApiRequest("search/images?q=" + URLEncoder.encode(query, StandardCharsets.UTF_8), MultipleImageResult.class).images();
     }
 
     @Override
-    public @NotNull List<ImageResult> batchQuery(@NotNull Collection<PhilomenaId> imageIds) throws PhilomenaAPIException {
+    public @NotNull List<ImageResponse> batchQuery(@NotNull Collection<PhilomenaId> imageIds) throws PhilomenaAPIException {
         if (imageIds.isEmpty()) {
             throw new IllegalArgumentException("imageIds must not be empty :(");
         }
@@ -58,7 +58,7 @@ public class PhilomenaAPIImpl implements PhilomenaAPI {
     }
 
     @Override
-    public @NotNull Optional<ImageResult> getImage(@NotNull PhilomenaId id) throws PhilomenaAPIException {
+    public @NotNull Optional<ImageResponse> getImage(@NotNull PhilomenaId id) throws PhilomenaAPIException {
         SingleImageResult result = this.makeApiRequest("images/" + id.rawId(), SingleImageResult.class, true);
 
         return result == null ? Optional.empty() : Optional.of(result.image());
@@ -113,7 +113,7 @@ public class PhilomenaAPIImpl implements PhilomenaAPI {
         return joiner.toString();
     }
 
-    private static record SingleImageResult(ImageResult image) { }
+    private static record SingleImageResult(ImageResponse image) { }
 
-    private static record MultipleImageResult(List<ImageResult> images) { }
+    private static record MultipleImageResult(List<ImageResponse> images) { }
 }

@@ -50,7 +50,7 @@ import java.util.Map;
  */
 @SuppressWarnings({"ClassWithTooManyFields", "NegativelyNamedBooleanVariable", "ClassWithTooManyMethods"})
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record ImageResult(
+public final record ImageResponse(
         @JsonProperty("animated") boolean animated,
         @JsonProperty("aspect_ratio") float aspectRatio,
         @JsonProperty("comment_count") int commentCount,
@@ -58,14 +58,14 @@ public record ImageResult(
         @JsonProperty("deletion_reason") String deletionReason,
         @JsonProperty("description") String description,
         @JsonProperty("downvotes") int downvotes,
-        @JsonProperty("duplicate_of") int duplicateOf,
+        @JsonProperty("duplicate_of") PhilomenaId duplicateOf,
         @JsonProperty("duration") float duration,
         @JsonProperty("faves") int faves,
         @JsonProperty("first_seen_at") LocalDateTime firstSeenAt,
         @JsonProperty("format") String format,
         @JsonProperty("height") int height,
         @JsonProperty("hidden_from_users") boolean hiddenFromUsers,
-        @JsonProperty("id") int id,
+        @JsonProperty("id") PhilomenaId id,
         // @JsonProperty("intensities") Object intensities,
         @JsonProperty("mime_type") String mimeType,
         @JsonProperty("name") String name,
