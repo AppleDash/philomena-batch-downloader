@@ -1,6 +1,6 @@
-package org.appledash.dbs.derpibooru.util;
+package org.appledash.pbd.philomena.util;
 
-import org.appledash.dbs.derpibooru.PhilomenaAPIBuilder;
+import org.appledash.pbd.philomena.PhilomenaAPIBuilder;
 import org.jetbrains.annotations.Contract;
 
 import java.net.URI;

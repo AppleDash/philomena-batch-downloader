@@ -1,11 +1,11 @@
-package org.appledash.dbs;
+package org.appledash.pbd;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.appledash.dbs.derpibooru.PhilomenaAPI;
-import org.appledash.dbs.derpibooru.structs.ImageResponse;
-import org.appledash.dbs.derpibooru.structs.PhilomenaId;
-import org.appledash.dbs.derpibooru.util.StandardPhilomenaBoorus;
+import org.appledash.pbd.philomena.PhilomenaAPI;
+import org.appledash.pbd.philomena.structs.ImageResponse;
+import org.appledash.pbd.philomena.structs.PhilomenaId;
+import org.appledash.pbd.philomena.util.StandardPhilomenaBoorus;
 
 import java.net.http.HttpClient;
 import java.nio.file.Path;

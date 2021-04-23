@@ -1,4 +1,4 @@
-package org.appledash.dbs.derpibooru;
+package org.appledash.pbd.philomena;
 
 public class PhilomenaAPIException extends Exception {
     public PhilomenaAPIException(String message) {

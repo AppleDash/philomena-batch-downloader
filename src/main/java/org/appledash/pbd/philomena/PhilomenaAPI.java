@@ -1,8 +1,8 @@
-package org.appledash.dbs.derpibooru;
+package org.appledash.pbd.philomena;
 
-import org.appledash.dbs.derpibooru.impl.PhilomenaAPIImpl;
-import org.appledash.dbs.derpibooru.structs.ImageResponse;
-import org.appledash.dbs.derpibooru.structs.PhilomenaId;
+import org.appledash.pbd.philomena.impl.PhilomenaAPIImpl;
+import org.appledash.pbd.philomena.structs.ImageResponse;
+import org.appledash.pbd.philomena.structs.PhilomenaId;
 import org.jetbrains.annotations.NotNull;
 
 import java.net.URI;

@@ -1,6 +1,6 @@
-package org.appledash.dbs;
+package org.appledash.pbd;
 
-import org.appledash.dbs.derpibooru.structs.PhilomenaId;
+import org.appledash.pbd.philomena.structs.PhilomenaId;
 
 import java.io.IOException;
 import java.io.PrintWriter;

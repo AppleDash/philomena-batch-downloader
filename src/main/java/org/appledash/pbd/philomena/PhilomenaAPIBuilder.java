@@ -1,6 +1,6 @@
-package org.appledash.dbs.derpibooru;
+package org.appledash.pbd.philomena;
 
-import org.appledash.dbs.derpibooru.impl.PhilomenaAPIImpl;
+import org.appledash.pbd.philomena.impl.PhilomenaAPIImpl;
 
 import java.net.URI;
 import java.net.http.HttpClient;

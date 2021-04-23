@@ -1,4 +1,4 @@
-package org.appledash.dbs.derpibooru.impl;
+package org.appledash.pbd.philomena.impl;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
@@ -6,10 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.appledash.dbs.derpibooru.PhilomenaAPI;
-import org.appledash.dbs.derpibooru.PhilomenaAPIException;
-import org.appledash.dbs.derpibooru.structs.ImageResponse;
-import org.appledash.dbs.derpibooru.structs.PhilomenaId;
+import org.appledash.pbd.philomena.PhilomenaAPI;
+import org.appledash.pbd.philomena.PhilomenaAPIException;
+import org.appledash.pbd.philomena.structs.ImageResponse;
+import org.appledash.pbd.philomena.structs.PhilomenaId;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

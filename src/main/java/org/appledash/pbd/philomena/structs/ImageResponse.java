@@ -1,4 +1,4 @@
-package org.appledash.dbs.derpibooru.structs;
+package org.appledash.pbd.philomena.structs;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
