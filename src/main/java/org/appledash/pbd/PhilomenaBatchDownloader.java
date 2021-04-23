@@ -6,6 +6,8 @@ import org.appledash.pbd.philomena.PhilomenaAPI;
 import org.appledash.pbd.philomena.structs.ImageResponse;
 import org.appledash.pbd.philomena.structs.PhilomenaId;
 import org.appledash.pbd.philomena.util.StandardPhilomenaBoorus;
+import org.appledash.pbd.workers.ChunkQuerier;
+import org.appledash.pbd.workers.ImageDownloader;
 
 import java.net.http.HttpClient;
 import java.nio.file.Path;

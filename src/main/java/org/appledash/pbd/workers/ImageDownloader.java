@@ -1,4 +1,4 @@
-package org.appledash.pbd;
+package org.appledash.pbd.workers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
